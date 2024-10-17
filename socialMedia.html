@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volksvagen-Das Auto</title>
+    <title>Chestnut</title>
     <style>
         * {
             background-color: #f9e6d1;
@@ -54,62 +54,96 @@
         .Line {
             position: absolute;
             top: 50px;
-            background-color: rgb(66, 33, 11) ;
+            background-color: rgb(66, 33, 11);
             height: 1px;
             width: 100vw;
             transform: translate(-10px);
-            /* z-index: -2; */
+            
         }
 
         li:hover {
             background-color: rgb(66, 33, 11);
             color: white;
         }
-        main{
+
+        main {
             margin: 10px 5px;
             padding: 3px;
             display: grid;
             grid-template-columns: 3fr 5fr 2fr;
+            gap: 35px;
+
         }
-        .profile{
-            border-radius: 15px;
+
+        .profile {
+            border-radius: 5px;
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: white;
-            grid-row: 1;
+            grid-column: 1;
         }
-        /* .image{
-            width: 50px;
-            height: 50px;
-            border-radius: 100475930px;
-            border: 2px solid;
-        } */
-        .profimg{
+        .profimg {
             background-color: white;
-            /* margin-top: 4px; */
-            /* margin-bottom: 0; */
-            border: 4px solid brown;
-            /* box-sizing: border-box; */
+            
+            
+            border: 1.3px solid brown;
+            
             height: 80px;
             width: 70px;
-            object-fit:cover;
+            object-fit: cover;
             border-radius: 15px;
-            /* padding-bottom: 10px; */
+
         }
-        /* .name, .about{
-            border-radius: 6px;
-            padding: 4px;
-        } */
-        .name{
+        .name {
             margin: 0;
             background-color: white;
             font-weight: 1000;
         }
-        .about{
+        button{
+            background-color: burlywood;
+            border-radius: 7px;
+            padding: 4px;
+            border: 1.4px solid brown;
+        }
+        .about {
             background-color: white;
             padding: 10px 20px;
         }
+        .actions{
+            grid-column: 2;
+            align-items: center;
+            
+        }
+        .post{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .post>div{
+            margin: 10px;
+            
+        }
+        .text{
+            width: 40vw;
+            background-color: wheat;
+            border-radius: 4px;
+            margin: 5px;
+            padding: 8px;
+            border: 2px solid brown;
+        }
+        .line2{
+            display: flex;
+            width: 40vw;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .profile, .post, .about {
+    background-color: white; /* Ensure it's set to white */
+}
+
     </style>
 </head>
 
@@ -132,11 +166,22 @@
         </div>
     </nav>
     <main>
-    <div class="Line"></div>
+        <div class="Line"></div>
         <div class="profile">
             <div class="image"><img class="profimg" src="WIN_20230626_11_01_02_Pro.jpg" alt=""></div>
             <div class="name">Abbas</div>
-            <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, autem quisquam nulla dolor a neque consequatur eveniet placeat atque minima quam soluta, natus esse nam iusto nihil labore saepe non aspernatur. Aliquam, ea.</div>
+            <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, autem quisquam nulla dolor
+                a neque consequatur eveniet placeat atque minima quam soluta, natus esse nam iusto nihil labore saepe
+                non aspernatur. Aliquam, ea.</div>
+        </div>
+        <div class="actions">
+            <div class="post">
+                <input class="text" type="text" placeholder="Write away!">
+                <div class="line2">
+                    <input class="file" type="file">
+                    <button>Post</button>
+                </div>
+            </div>
         </div>
     </main>
 </body>
